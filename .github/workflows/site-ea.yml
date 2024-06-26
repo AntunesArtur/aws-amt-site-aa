@@ -31,7 +31,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
-        run:
+        run: 
           echo "${{ secrets.AWS_AMT_VM_KEY }}" > chave.pem
           chmod 400 chave.pem
-          ssh -i chave.pem ubunto@ec2-54-224-159-11.compute-1.amazonaws.com -c "cd /var/www/html/aa && ls -all"
+          ssh -i chave.pem ubunto@ec2-54-224-159-11.compute-1.amazonaws.com -t "cd /var/www/html/aa; ls -all"
