@@ -34,4 +34,4 @@ jobs:
         run: 
           echo "${{ secrets.AWS_AMT_VM_KEY }}" > chave.pem
           chmod 400 chave.pem
-          ssh -i chave.pem ubunto@ec2-54-224-159-11.compute-1.amazonaws.com -t "cd /var/www/html/aa; ls -all"
+          ssh -o StrictHostKeyChecking=no -i chave.pem ubunto@ec2-54-224-159-11.compute-1.amazonaws.com -t "cd /var/www/html/aa/aws-amt-site-aa; git pull"
