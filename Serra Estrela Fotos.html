@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang = "pt-pt">
+    <head>
+        <meta charset = "utf-8"/>
+        <title>Montanhas Ibéricas</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type = "text/css" href = "style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--tag para tornar site responsivo-->
+    </head>
+
+    <body>
+        <header>
+            <h1>Serra da Estrela</h1>
+        </header>
+
+            <nav>
+                <div class="button">
+                 <button onclick="myFunction()">&equiv;</button>
+                    <ul class="dropdown-menu" id="myDropdown">
+                        <li><a href = "Index.html">Início</a></li>
+                        <li><a href = "Serra Estrela Sobre.html">Sobre</a></li>                  
+                    </ul>
+                </div>           
+            </nav>
+         
+             
+            <script>
+                /*para facilitar navegabilidade em dispositivos touch, um clix fixa o menu para facilitar escolha de opção*/
+                /* When the user clicks on the button, 
+                toggle between hiding and showing the dropdown content */
+                function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+                }
+                
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function(event) {
+                if (!event.target.matches('button')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-menu");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                    }
+                }
+                }
+            </script>
+       
+        <main class = "posicao_main_fotos">
+            <!-- Slideshow container -->
+            <div class="slideshow-container" id = "myvideo">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">               
+                <img src="img/Serra_Estrela/IMG_8356.jpg"style="width:100%">              
+                </div>
+            
+                <div class="mySlides fade">             
+                <img src="img/Serra_Estrela/IMG_8359.jpg" style="width:100%">        
+                </div>
+            
+                <div class="mySlides fade">               
+                <img src="img/Serra_Estrela/IMG_8366.jpg" style="width:100%">              
+                </div>
+
+                <div class="mySlides fade">               
+                <img src="img/Serra_Estrela/IMG_8370.jpg" style="width:100%">              
+                </div>
+                
+                <div class="mySlides fade">               
+                <img src="img/Serra_Estrela/IMG_8380.jpg" style="width:100%">              
+                </div>                
+            
+                <div class="mySlides fade">               
+                <img src="img/Serra_Estrela/IMG_8393.jpg" style="width:100%">              
+                </div>
+
+                <div class="mySlides fade">               
+                <img src="img/Serra_Estrela/IMG_8401.jpg" style="width:100%">              
+                </div>
+            
+                <div class="mySlides fade">             
+                <img src="img/Serra_Estrela/IMG_8415.jpg" style="width:100%">        
+                </div>
+            
+                <div class="mySlides fade">               
+                <img src="img/Serra_Estrela/IMG_8426.jpg" style="width:100%">              
+                </div>
+
+                <div class="mySlides fade">               
+                <img src="img/Serra_Estrela/IMG_8458.jpg" style="width:100%">              
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+                <span class="dot" onclick="currentSlide(9)"></span> 
+                <span class="dot" onclick="currentSlide(10)"></span>
+            </div>
+        
+             
+
+            <!--Para passar slide um a um manualmente-->
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                // Next/previous controls
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+
+                // Thumbnail image controls
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                }
+            </script>
+        </main>        
+
+        <footer class = "footerfotos">
+            <p class="rodapetext">                
+                <br>Artur Antunes
+                <br>   <!--Não consegui identificar a razão mas a class que criei para formatar o texto da licença não estava a alterar a cor, para forçar fui obrigado a aplicar o style diretamente aqui no html-->            
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="blank" class="rodapehiperligacao"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span class ="rodapehiperligacao" style="color:rgb(62, 62, 62)"> O trabalho </span><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/StillImage" property="dct:title" rel="dct:type" target="blank" class="rodapehiperligacao"></span><span class="rodapehiperligacao" style="color:rgb(62, 62, 62)">Site Montanhas Ibéricas</span><span class="rodapehiperligacao" style="color:rgb(62, 62, 62)"> de </span><a xmlns:cc="http://creativecommons.org/ns#" href="http://montanhasibericas.alojamento-gratis.com/Index.html" property="cc:attributionName" rel="cc:attributionURL" target="blank" class="rodapehiperligacao"><span class="rodapehiperligacao" style="color:rgb(62, 62, 62)"> Antunes</span></a><span class="rodapehiperligacao" style="color:rgb(62, 62, 62)"> está licenciado com uma Licença </span><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="blank" class="rodapehiperligacao"><span class="rodapehiperligacao" style="color:rgb(62, 62, 62)">Creative Commons - Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional.</span></a>
+            </p>  
+        </footer>
+    </body>
+</html>

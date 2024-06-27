@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang = "pt-pt">
+    <head>
+        <meta charset = "utf-8"/>
+        <title>Montanhas Ibéricas</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type = "text/css" href = "style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--tag para tornar site responsivo-->
+    </head>
+
+    <body>
+        <header>
+            <h1>Picos da Europa</h1>
+        </header>        
+       
+        
+        <nav>
+            <div class="button">
+             <button onclick="myFunction()">&equiv;</button>
+                <ul class="dropdown-menu" id="myDropdown">
+                    <li><a href = "Index.html">Início</a></li>
+                    <li><a href = "Picos Europa Fotos.html">Galeria</a></li>                  
+                </ul>
+            </div>           
+        </nav>
+     
+         
+        <script>
+            /*para facilitar navegabilidade em dispositivos touch, um clix fixa o menu para facilitar escolha de opção*/
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+            if (!event.target.matches('button')) {
+                var dropdowns = document.getElementsByClassName("dropdown-menu");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+                }
+            }
+            }
+        </script>
+       
+        <main class = "main_sobre">
+            <p>Localizado no norte de Espanha, o Parque Nacional dos Picos da Europa, fundado em 1918, é o mais antigo de Espanha, desenvolve-se ao longo das províncias das Astúrias, Cantábria e León e está dividido em três maciços, Cornión, Urrieles e Ándara.</p>
+            <p>O clima é do tipo Atlântico Temperado Húmido.</p>
+            <p>Têm origem nas grandes orogenias do Carbonífero e Terciário, encontra-se aqui calcário e materiais siliciclásticos.</p>
+            <p>Com uma ampla rede de recursos subterrâneos afloram os rios Sella, Cares e Deva.</p>
+            <p>Lar de dois dos mais emblemáticos animais, o urso-pardo e o lobo ibérico. Alberga um flora riquíssima com mais de 1750 espécies, duas áreas de floresta são desde 2017 Património Mundial da UNESCO.</p>
+            
+            <table class="thgrelha">
+				<tr>
+					<th>Cordilheira</th>
+					<th>Área</th>
+                    <th>Ponto mais Alto</th>
+				</tr>
+				<tr>
+					<td>Cantábrica</td>
+					<td>672 km2  (Parque Nacional dos Picos da Europa)</td>
+                    <td>Torre Cerredo 2648 m</td>
+				</tr>
+				
+			</table>
+        </main>
+
+        <main class = "main_sobre_localizacao">
+             <h2 class="h2_localizacao">Localização</h2>
+            <iframe class = "mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429503.88499570376!2d-5.167967901034083!3d43.286880590044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd49c893856535cf%3A0x7291815fe2dcd950!2sPicos%20de%20Europa!5e0!3m2!1spt-PT!2spt!4v1682335264350!5m2!1spt-PT!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </main>
+    
+        <footer>
+            <p class="rodapetext">                
+                <br>Artur Antunes
+                <br>   <!--Não consegui identificar a razão mas a class que criei para formatar o texto da licença não estava a alterar a cor, para forçar fui obrigado a aplicar o style diretamente aqui no html-->            
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="blank" class="rodapehiperligacao"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span class ="rodapehiperligacao" style="color:rgb(62, 62, 62)"> O trabalho </span><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/StillImage" property="dct:title" rel="dct:type" target="blank" class="rodapehiperligacao"></span><span class="rodapehiperligacao" style="color:rgb(62, 62, 62)">Site Montanhas Ibéricas</span><span class="rodapehiperligacao" style="color:rgb(62, 62, 62)"> de </span><a xmlns:cc="http://creativecommons.org/ns#" href="http://montanhasibericas.alojamento-gratis.com/Index.html" property="cc:attributionName" rel="cc:attributionURL" target="blank" class="rodapehiperligacao"><span class="rodapehiperligacao" style="color:rgb(62, 62, 62)"> Antunes</span></a><span class="rodapehiperligacao" style="color:rgb(62, 62, 62)"> está licenciado com uma Licença </span><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="blank" class="rodapehiperligacao"><span class="rodapehiperligacao" style="color:rgb(62, 62, 62)">Creative Commons - Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional.</span></a>
+            </p>
+        </footer>
+    </body>
+</html>
